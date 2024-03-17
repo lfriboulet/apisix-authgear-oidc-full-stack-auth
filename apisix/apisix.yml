@@ -6,8 +6,9 @@ upstreams:
       "backend:80": 1
 routes:
   - name: "protected_route"
-    uri: /protected
-    method: GET
+    uri: "/protected"
+    methods:
+      - GET
     upstream_id: 1
     plugins:
       openid-connect:
